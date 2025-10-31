@@ -16,7 +16,7 @@
 {% for jogador in jogadores %}
     <section class="jogador container">
         <div class="jogador-caixa">
-            <img src="{% static jogador.foto %}" alt="{{ jogador.nome }}" class="jogador-img"> 
+            <img src="{{ jogador.foto.url }}" alt="{{ jogador.nome }}" class="jogador-img"> 
             <div class="card-body">
                 <h1 class="jogador-titulo">{{ jogador.nome }}</h5>
                 <div class="jogador-text">
