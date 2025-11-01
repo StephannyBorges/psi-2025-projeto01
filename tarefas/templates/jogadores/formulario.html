@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<h1>{% if form.instance.pk %}Editar{% else %}Novo{% endif %} Jogador</h1>
+  <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn">Salvar</button>
+  </form>
+  <a href="{% url 'lista_jogadores' %}" class="btn">Cancelar</a>
+{% endblock %}
